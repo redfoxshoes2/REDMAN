@@ -10,8 +10,17 @@
         "ImageId": "ami-0f02ee371c8994d61",
         "InstanceType": "t2.micro",
         "KeyName": "mrezeino",
-        "SecurityGroupIds": [ "sg-0fc7dc163dcbc5baf" ],
-        "SubnetId": "subnet-6ac82f35"
+        "NetworkInterfaces": [
+            {
+                "AssociatePublicIpAddress": true,
+                "DeleteOnTermination": true,
+                "DeviceIndex": "0",
+                "SubnetId": "subnet-6ac82f35",
+                "GroupSet": [
+                    "sg-0fc7dc163dcbc5baf"
+                ]
+            }
+        ]
       }
     }
   },
